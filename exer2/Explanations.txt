@@ -1,0 +1,34 @@
+1. React on Facebookin/Metan luoma JavaScript kirjasto.
+   Se sallii helpon ja nopean käytön devaajien luodessa käyttöliittymää verkkosivuille ja applikaatioille.
+   Esimerkkinä React:illa on tehty instagram.com.
+
+2. React Component
+   Komponentit ovat itsenäisiä uudelleen käytettäviä paloja koodia.
+   Komponentit tulevat kahdessa muodossa, joko luokka (Class) tai funktio.
+   
+
+3. Single-page application
+   SPA on web-applikaatio, joka näytetään käyttäjälle yhdellä HTML-sivulla.
+   Sen ideana on olla responsiivisempi ja näyttää työpöytä-applikaatiolta.
+   Esimerkkejä SPA:sta: Netflix, Gmail ja PayPal
+
+4. Declarative programming (versus imperative programming)
+   Declarative programming is a programming paradigm, 
+   that expresses the logic of a computation without describing its control flow.
+   Imperative programming is a programming paradigm that uses statements,
+   that change a program’s state.
+
+5. JSX
+   Eli JavaScript XML, joka sallii HTML kirjotuksen React:issa.
+   Se tekee siitä helpompaa kirjottaa ja lisätä HTML:ää React:issa.
+   Se sallii JavaScript:in kirjoituksen, joka näyttää markup:ilta.
+
+6. Asynchronous (versus synchronous)
+   Asynkronisella ohjelmoinnilla voidaan tehdä asiat samaan aikaan ilman,
+   että tarvitsee odottaa edellisen loppuvan.
+   Synkronisella ohjelmoinnilla suoritetaan tehtävät järjestyksessä,
+   eikä voida ajaa uutta tehtävää ennen kuin vanha on loppunut.
+   Asynkronista kuvaa parhaiten esimerkiksi viestin lähettäminen, kun viesti on lähtenyt
+   lähettäjän ei tarvitse jäädä odottamaan vastausta vaan voi jatkaa muita asioita.
+   Synkronista kuvaa puhelimessa puhuminen, kun henkilö 1 puhuu,
+   niin henkilö 2 kuuntelee ja odottaa vuoroaan.
