@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const MenuItem = (props) => {
   //                              Default value
   //    Muuttuja, jonka tilaa seurataan

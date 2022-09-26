@@ -35,6 +35,23 @@ const scifi = [
     year: "1987",
   },
 ];
+const action = [
+  {
+    title: "Taken",
+    director: "Pierre Morel",
+    year: "2008",
+  },
+  {
+    title: "The Batman",
+    director: "Matt Reeves",
+    year: "2022",
+  },
+  {
+    title: "Die Hard",
+    director: "John McTiernan",
+    year: "1988",
+  },
+];
 
 //components are functions
 const App = () => {
@@ -43,6 +60,7 @@ const App = () => {
       <h1>Movies</h1>
       <GenreList movies={thrillers} genreName="Thriller" />
       <GenreList movies={scifi} genreName="Scifi" />
+      <GenreList movies={action} genreName="Action" />
     </div>
   );
 };

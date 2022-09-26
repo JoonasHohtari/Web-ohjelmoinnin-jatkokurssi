@@ -1,6 +1,6 @@
-import MenuItem from "./components/MenuItem";
 import { useState } from "react";
 import AddItem from "./components/AddItem";
+import MenuList from "./components/MenuList";
 
 const menu = [
   {
@@ -39,17 +39,7 @@ const App = () => {
   return (
     <div>
       <h1>Hyvä Rafla</h1>
-      <ul>
-        {menuItems.map((item) => (
-          <MenuItem
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            price={item.price}
-            removeHandler={removeHandler}
-          />
-        ))}
-      </ul>
+      <MenuList menuItems={menuItems} removeHandler={removeHandler} />
       <AddItem setMenuItems={setMenuItems} />
     </div>
   );

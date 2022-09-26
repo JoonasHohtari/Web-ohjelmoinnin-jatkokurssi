@@ -1,0 +1,188 @@
+EXERCISE 3: JavaScript
+
+In the 'Exercises' folder create a new folder called 'exercise-3'.
+Inside that folder create a text-file or JS-file and copy your solutions there.
+
+You can test JS code either online, e.g.: https://jsbin.com/?html,js,output
+Or locally: Create a JS file in a folder (for example jsExercises.js)
+and open it in VS Code. You can run it with F5.
+Select Node.js for debugging if asked.
+
+
+3.1
+
+Turn the following functions into arrow functions,
+and test that they work:
+
+
+function greet() {
+  console.log("Hello there!");
+}
+
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+
+
+3.2
+
+Complete the code in the function, so that it will return the length
+of the longest name given in the array.
+For example, with these name, the log in the end should print '8'.
+
+
+const names = ["Lily", "Aurelius", "Peter"];
+
+function longestName(names) {
+  //your code here
+}
+
+console.log(longestName(names));
+
+
+
+3.3
+
+Read about using random numbers in JS in here: https://www.w3schools.com/js/js_random.asp
+
+Create a program that has a 50 % chance of saying 'Good morning'
+and a 50 % chance of saying 'Good evening'.
+
+
+
+3.4
+
+Create a function that takes two arguments min and max,
+and returns a random number between them.
+
+Log also inside the function whether the returned number is odd or even using
+the ternary operator (?).
+
+
+
+3.5
+
+Create a function that takes an array as an argument,
+and logs the value of a random token inside the array.
+Note that the function should work with arrays of different
+size.
+
+
+
+3.6
+
+const southamericans = ["Pele", "Maradona", "Messi"];
+const europeans = ["Baggio", "Zidane", "Litmanen"];
+
+Let's combine these great footballers into a single array
+called 'footballers'. You can use for example the spread operator.
+
+
+
+3.7
+
+Use destructuring to pick the first and second value from this
+array to variables x and y. So, x and y should log 10 and 20.
+
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+Still using destructuring, pick the first and third values
+for x and y (10 and 30).
+
+Use the rest operator to create a new array that consists of
+the values from 50 to 100.
+
+Hint: You can just yse some dummy variables to 'absorb'
+the values you don't need.
+
+
+
+3.8
+
+Take this code:
+
+const person1 = {
+  name: "Vilja",
+  lastName: "Pelto",
+};
+
+const person2 = {
+  name: "Miina",
+  lastName: "Kenttä",
+};
+
+const people = [];
+
+
+Push person1 and person2 into the people array.
+Next, map through the array to greet both of them.
+The log should read for example:
+
+Good evening, Vilja!
+Good evening, Miina!
+
+
+
+3.9
+
+Vivian, Jaakko and Maija happen to be identical siblings, so their lastnames
+and ages are the same. Map through the names array to create three objects from them.
+The objects should have a first name, last name and age.
+
+const names = ["Vivian", "Jaakko", "Maija"];
+
+const people = names.map( <-continue from here
+
+console.log(people);
+
+
+
+3.10
+
+Copy and run the code below. From the logs you can see that the idea is pretty straightforward:
+We fetch some data from the internet and use it.
+
+const fetchData = () => {
+  console.log("Start fetching...");
+  console.log("Data received!");
+};
+
+console.log("Let's get some data from the internet!");
+fetchData();
+console.log("Let's use the data we fetched!");
+
+---
+
+But in reality it wouldn't be so simple. The fetching would take time.
+Let's simulate that by adding some time delay to the fetching.
+Add the following between the 'Start fetching...' and 'Data received!':
+
+await new Promise((r) => setTimeout(r, 2000));
+
+You will get an error. This is because we should declare that the fetchData-function is asynchronous.
+Look up from the internet how to make an arrow function asynchronous in JavaScript.
+
+---
+
+After you have corrected the code, the program works again, and now you will notice the simulated delay.
+But if you look at the logs, you can see a problem: We are trying to use the data before we receive it!
+This is why we should always be careful with asynchronous functions;
+we have to make sure we do things in a proper order.
+
+One solution would be to use the fetched data in the fetchData function.
+Another solution is to use the promise-then-structure.
+Our fetchData returns a 'promise', and we can wait for this to happen before we continue
+by using the then-function.
+
+Move the logging of 'Let's use the data we fetched!' inside the then in the following way:
+
+fetchData().then(function (value) {
+  console.log("Let's use the data we fetched!");
+});
+
+Now when you run the code, you can see that we wait for the fetchData to 'resolve'
+before we try to use the data.
+
+You can read more about async/await and promise/then in JavaScript.
