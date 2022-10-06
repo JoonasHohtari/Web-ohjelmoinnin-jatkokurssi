@@ -1,30 +1,16 @@
 import MoviesList from "./components/MoviesList";
 import "./App.css";
-import React, { useState } from "react";
-
-/*
-const movies = [
-  {
-    id: 1,
-    title: "Movie 1",
-    openingText: "A long time ago...",
-    releaseDate: "1977-05-25",
-  },
-  {
-    id: 2,
-    title: "Movie 2",
-    openingText: "An even longer time ago...",
-    releaseDate: "1999-05-19",
-  },
-];
-*/
+import React, { useState, useEffect } from "react";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setLoading] = useState(false);
 
   const fetchMoviesHandler = async () => {
     try {
+      setLoading(true);
+      //await new Promise((r) => setTimeout(r, 2000));
       const response = await fetch("https://swapi.dev/api/films");
 
       if (!response.ok) {
@@ -45,16 +31,28 @@ const App = () => {
     } catch (error) {
       setError(error.message);
     }
+
+    setLoading(false);
     // käytetään dataa
   };
+
+  useEffect(() => {
+    console.log("Use Effect");
+    fetchMoviesHandler();
+  }, []);
 
   let content;
 
   if (error) {
     content = <p>{error}</p>;
+  }
+  if (isLoading) {
+    console.log("Lataa");
+    content = <p>Loading...</p>;
   } else {
     content = <MoviesList movies={movies} />;
   }
+
   return (
     <>
       <section>
