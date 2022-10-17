@@ -1,7 +1,7 @@
 import MoviesList from "./components/MoviesList";
 import "./App.css";
 import React, { useState, useEffect } from "react";
-
+// Completed
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
