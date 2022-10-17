@@ -11,7 +11,7 @@ const MenuItem = (props) => {
   return (
     <div>
       <p>
-        {props.name} {props.price}
+        {props.name} {props.price} $
       </p>
       <button onClick={clickHandler}>Delete</button>
     </div>

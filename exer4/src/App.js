@@ -1,5 +1,5 @@
 import GenreList from "./components/GenreList";
-
+// Completed
 const thrillers = [
   {
     title: "Psycho",

@@ -1,4 +1,4 @@
-// 3.1
+// 3.1  COMPLETED
 /*
 const greet = () => console.log("Hello there!");
 
@@ -7,7 +7,7 @@ const sum = (a, b, c) => {
 };
 
 greet();
-sum(1, 2, 3);
+console.log(sum(1, 2, 3));
 
 // 3.2
 const names = ["Lily", "Aurelius", "Peter"];
@@ -61,7 +61,6 @@ randArray(c);
 randArray(d);
 
 
-
 // 3.6
 
 const southamericans = ["Pele", "Maradona", "Messi"];
@@ -71,8 +70,7 @@ const footballers2 = [].concat(southamericans).concat(europeans);
 console.log(footballers1);
 console.log(footballers2);
 
-  //  3.7
-
+//  3.7
 
 [x, y] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 [x, y, z] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
@@ -109,7 +107,7 @@ const people = names.map((name) => {
   };
 });
 console.log(people[0], people[1], people[2]);
-*/
+
 
 // 3.10
 
@@ -123,3 +121,4 @@ console.log("Let's get some data from the internet!");
 fetchData().then(function (value) {
   console.log("Let's use the data we fetched!");
 });
+*/

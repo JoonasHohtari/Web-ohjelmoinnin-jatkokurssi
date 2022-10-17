@@ -5,11 +5,11 @@ const CountryList = (props) => {
   return (
     <div className="countrylist">
       <h1>{props.regionName}</h1>
-      <Movie movieData={props.movies[0]} />
-      <Movie movieData={props.movies[1]} />
-      <Movie movieData={props.movies[2]} />
+      <Country countryData={props.countries[0]} />
+      <Country countryData={props.countries[1]} />
+      <Country countryData={props.countries[2]} />
     </div>
   );
 };
 
-export default GenreList;
+export default CountryList;

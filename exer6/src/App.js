@@ -1,7 +1,8 @@
 import { useState } from "react";
 import AddItem from "./components/AddItem";
 import MenuList from "./components/MenuList";
-
+import "./Menu.css";
+// completed
 const menu = [
   {
     id: 1,
@@ -38,8 +39,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>Hyvä Rafla</h1>
-      <MenuList menuItems={menuItems} removeHandler={removeHandler} />
+      <div className="menu">
+        <h1>Hyvä Rafla</h1>
+        <MenuList menuItems={menuItems} removeHandler={removeHandler} />
+      </div>
       <AddItem setMenuItems={setMenuItems} />
     </div>
   );

@@ -1,3 +1,5 @@
+// Completed
+
 1. React on Facebookin/Metan luoma JavaScript kirjasto.
    Se sallii helpon ja nopean käytön devaajien luodessa käyttöliittymää verkkosivuille ja applikaatioille.
    Esimerkkinä React:illa on tehty instagram.com.

@@ -1,3 +1,5 @@
+import "../Menu.css";
+
 const AddItem = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,7 +19,7 @@ const AddItem = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="menu">
       <input type="text" id="name" />
       <input type="text" id="price" />
       <button type="submit">Add Menu Item</button>

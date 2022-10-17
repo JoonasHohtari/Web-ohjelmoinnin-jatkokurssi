@@ -1,5 +1,5 @@
 import CountryList from "./components/CountryList";
-
+// Completed
 const easternEurope = [
   {
     name: "Romania",
@@ -7,7 +7,7 @@ const easternEurope = [
   },
   {
     name: "Poland",
-    capital: "Jonathan Demme",
+    capital: "Warsaw",
   },
   {
     name: "Hungary",
@@ -15,41 +15,41 @@ const easternEurope = [
   },
 ];
 
-const scifi = [
+const southernEurope = [
   {
-    name: "Metropolis",
-    capital: "Fritz Lang",
+    name: "Italy",
+    capital: "Rome",
   },
   {
-    name: "2001: A Space Odyssey",
-    capital: "Stanley Kubrick",
+    name: "Greece",
+    capital: "Athens",
   },
   {
-    name: "Robocop",
-    capital: "Paul Verhoeven",
+    name: "Malta",
+    capital: "Valetta",
   },
 ];
-const action = [
+const westernEurope = [
   {
-    name: "Taken",
-    capital: "Pierre Morel",
+    name: "Germany",
+    capital: "Berlin",
   },
   {
-    name: "The Batman",
-    capital: "Matt Reeves",
+    name: "Austria",
+    capital: "Vienna",
   },
   {
-    name: "Die Hard",
-    capital: "John McTiernan",
+    name: "Liechtenstein",
+    capital: "Vaduz",
   },
 ];
 function App() {
   return (
     <div>
       <h1>Countries</h1>
-      <GenreList countries={easternEurope} regionName="Eastern Europe" />
-      <GenreList countries={centralEurope} regionName="Central Europe" />
-      <GenreList countries={westernEurope} regionName="Western Europe" />
+      <CountryList countries={easternEurope} regionName="Eastern Europe" />
+      <CountryList countries={southernEurope} regionName="Southern Europe" />
+      <CountryList countries={westernEurope} regionName="Western Europe" />
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.menu {
+  padding: 1rem;
+  background-color: rgb(117, 85, 85);
+  margin: 2rem auto;
+  max-width: 95%;
+  width: 50rem;
+  font-style: times;
+  font-size: 150%;
+}
+
+.menu h1 {
+  text-align: center;
+  color: rgb(177, 26, 26);
+  text-shadow: 2px 2px #262525;
+}
+
+.menulist {
+  padding: 1rem;
+  background-color: rgb(117, 85, 85);
+  margin: 2rem auto;
+  max-width: 95%;
+  width: 50rem;
+  font-style: italic;
+  font-size: 110%;
+}

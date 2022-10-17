@@ -1,8 +1,8 @@
 import MenuItem from "./MenuItem";
-
+import "../Menu.css";
 const MenuList = (props) => {
   return (
-    <ul>
+    <ul className="menulist">
       {props.menuItems.map((item) => (
         <MenuItem
           key={item.id}

@@ -3,8 +3,8 @@ import "./Country.css";
 const Country = (props) => {
   return (
     <div className="country">
-      <p className="country__name">{props.countryData.name}</p>
-      <p className="country__capital">{props.countryData.capital}</p>
+      <h3 className="country__name">{props.countryData.name}</h3>
+      <p className="country__capital">Capital: {props.countryData.capital}</p>
     </div>
   );
 };
