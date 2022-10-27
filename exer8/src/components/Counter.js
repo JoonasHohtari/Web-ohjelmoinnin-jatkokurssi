@@ -1,19 +1,11 @@
 const Counter = (props) => {
-  let count = 0;
   const incrementValue = () => {
-    if (props.setValue2) {
-      count++;
-      props.value1++;
-    } else {
-      count++;
-      props.value2++;
-    }
+    props.setValue((x) => x + 1);
   };
   return (
     <div>
-      <p>
-        <button onClick={incrementValue}></button>
-      </p>
+      <p>{props.value}</p>
+      <button onClick={incrementValue}>+</button>
     </div>
   );
 };
