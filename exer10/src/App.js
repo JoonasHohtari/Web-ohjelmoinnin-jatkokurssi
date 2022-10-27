@@ -1,8 +1,8 @@
-import JokeList from "./components/JokeList";
 import "./App.css";
+import ChuckJoke from "./components/ChuckJoke";
 import React, { useState, useEffect } from "react";
 function App() {
-  const [joke, setJoke] = useState([]);
+  const [joke, setJoke] = useState("");
   const [error, setError] = useState(null);
   const [isLoading, setLoading] = useState(false);
 
@@ -11,26 +11,19 @@ function App() {
       setLoading(true);
       //await new Promise((r) => setTimeout(r, 2000));
       const response = await fetch("https://api.chucknorris.io/jokes/random");
+      console.log(response);
       if (!response.ok) {
         throw new Error("Something went wrong..");
       }
 
       const data = await response.json();
+      console.log(data);
+      console.log(data.value);
       // en tiedä miksei data muunnu, eikä tulostu
-      const transformedJoke = data.data.map((jokeData) => {
-        console.log("transformed");
-        return {
-          value: jokeData.data.value,
-          date: jokeData.data.created_at,
-          url: jokeData.data.url,
-        };
-      });
-      setJoke(transformedJoke);
-      console.log(transformedJoke);
+      setJoke(data);
     } catch (error) {
       setError(error.message);
     }
-
     setLoading(false);
     // käytetään dataa
   };
@@ -48,7 +41,7 @@ function App() {
     console.log("Lataa");
     content = <p>Loading...</p>;
   } else {
-    content = <JokeList joke={joke} />;
+    content = <ChuckJoke joke={joke} />;
   }
 
   return (

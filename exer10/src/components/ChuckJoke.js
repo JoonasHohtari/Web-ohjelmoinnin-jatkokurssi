@@ -2,11 +2,11 @@ import "./Jokes.css";
 
 const ChuckJoke = (props) => {
   return (
-    <li className="joke">
-      <p>{props.date}</p>
-      <h2>{props.value}</h2>
-      <p>{props.url}</p>
-    </li>
+    <div className="joke">
+      <p>{props.joke.created_at}</p>
+      <h2>{props.joke.value}</h2>
+      <p>{props.joke.url}</p>
+    </div>
   );
 };
 
