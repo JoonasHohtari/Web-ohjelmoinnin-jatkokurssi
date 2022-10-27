@@ -1,7 +1,7 @@
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
 import { useState, useEffect } from "react";
-
+// completed
 const App = () => {
   const [todos, setTodos] = useState([]);
 
