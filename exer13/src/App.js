@@ -5,7 +5,7 @@ import CanadaPage from "./pages/Canada";
 import PortugalPage from "./pages/Portugal";
 import { Route, Switch } from "react-router-dom";
 import MainNavigation from "./components/MainNavigation";
-
+// Completed
 const App = () => {
   return (
     <div>
