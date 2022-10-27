@@ -1,14 +1,14 @@
-import AddTodo from "./components/AddPerson";
-import TodoList from "./components/FamousPeople";
+import AddTodo from "./components/AddTodo";
+import TodoList from "./components/TodoList";
 import { useState, useEffect } from "react";
 
 const App = () => {
-  const [famousppl, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]);
 
   const addTodoHandler = async (todo) => {
     console.log(todo);
     const response = await fetch(
-      "https://exercise-12-93e21-default-rtdb.europe-west1.firebasedatabase.app/famousppl.json",
+      "https://todo-list-1b032-default-rtdb.europe-west1.firebasedatabase.app/todos.json",
       {
         method: "POST",
         body: JSON.stringify(todo),
@@ -24,7 +24,7 @@ const App = () => {
 
   const fetchTodos = async () => {
     const response = await fetch(
-      "https://exercise-12-93e21-default-rtdb.europe-west1.firebasedatabase.app//famousppl.json"
+      "https://todo-list-1b032-default-rtdb.europe-west1.firebasedatabase.app/todos.json"
     );
     const data = await response.json();
 

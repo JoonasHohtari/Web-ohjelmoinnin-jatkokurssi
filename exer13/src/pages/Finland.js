@@ -15,12 +15,18 @@ const FinlandPage = () => {
   };
 
   const randomHandler = () => {
-    if (Math.random() < 0.5) {
+    let randomValue = Math.random();
+
+    if (randomValue < 0.25) {
       history.push("/italy");
       //history.replace("/italy");
-    } else {
+    } else if (randomValue < 0.5) {
       history.push("/brazil");
       //history.replace("/brazil");
+    } else if (randomValue < 0.75) {
+      history.push("/canada");
+    } else {
+      history.push("/portugal");
     }
   };
 
